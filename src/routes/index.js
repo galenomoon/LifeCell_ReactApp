@@ -11,11 +11,13 @@ import { AdminRoutes, StudentRoutes } from './AuthenticatedRoutes';
 export default function ApplicationRouter() {
   return (
     <Router>
-      <Routes>
-        <Route exact path='/' element={<LandingPage />} />
-        <Route path='/admin/*' element={<AdminRoutes />} />
-        <Route path='/student/*' element={<StudentRoutes />} />
-      </Routes>
+      <div className='bg-default bg-cover w-full h-full text-[#fff] font-poppins'>
+        <Routes>
+          <Route exact path='/' element={<LandingPage />} />
+          <Route path='/admin/*' element={<AdminRoutes />} />
+          <Route path='/student/*' element={<StudentRoutes />} />
+        </Routes>
+      </div>
     </Router>
   )
 }
