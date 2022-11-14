@@ -44,6 +44,9 @@ module.exports = {
         'default': "url('/src/assets/default.svg')",
         'opened_iphone': "url('/src/assets/opened_iphone_13_pro_max.svg')",
         'closed_iphone': "url('/src/assets/closed_iphone_13_pro_max.svg')",
+        'blue_lines': "url('/src/assets/blue_bg-lines.png')",
+        'green_lines': "url('/src/assets/green_bg-lines.png')",
+        'yellow_lines': "url('/src/assets/yellow_bg-lines.png')",
       },
       colors: {
         'secondary': '#00C0FF',
