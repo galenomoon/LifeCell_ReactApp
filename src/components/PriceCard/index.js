@@ -7,18 +7,18 @@ export default function PriceCard({ plan, index }) {
 
   React.useEffect(() => {
     if (color === 'yellow') {
-      setColors({ font: 'text-[#FFC700]', bg: 'bg-yellow_lines hover:shadow-[#FFC700aa] shadow-2xl duration-200' })
+      setColors({ font: 'text-[#FFC700]', bg: 'bg-yellow_lines hover:shadow-[#FFC70099] shadow-2xl duration-300' })
     }
     if (color === 'green') {
-      setColors({ font: 'text-[#34A853]', bg: 'bg-green_lines hover:shadow-[#34A853aa] shadow-2xl duration-200' })
+      setColors({ font: 'text-[#34A853]', bg: 'bg-green_lines hover:shadow-[#34A85399] shadow-2xl duration-300' })
     }
     if (color === 'blue') {
-      setColors({ font: 'text-[#00C0FF]', bg: 'bg-blue_lines hover:shadow-[#00C0FFaa] shadow-2xl duration-200' })
+      setColors({ font: 'text-[#00C0FF]', bg: 'bg-blue_lines hover:shadow-[#00C0FF99] shadow-2xl duration-300' })
     }
   }, [plan])
 
   return (
-    <div className={`relative group hover:scale-105 py-[100px] gap-[70px] h-[750px] w-[380px]  ${colors?.bg} border-[#fff] ${index % 2 == 0 && 'border-opacity-40'} border-[2px] rounded-2xl flex flex-col items-center bg-cover`}>
+    <div className={`relative group hover:scale-[1.02] py-[100px] gap-[70px] h-[750px] w-[380px]  ${colors?.bg} border-[#fff] ${index % 2 == 0 && 'border-opacity-40'} border-[2px] rounded-2xl flex flex-col items-center bg-cover`}>
       <div className='flex flex-col items-center  leading-tight'>
         <span className={`text-[26px] font-bold uppercase ${colors?.font}`}>
           {title}
@@ -38,7 +38,7 @@ export default function PriceCard({ plan, index }) {
           </div>
         )}
       </div>
-      <button className='absolute bottom-20 text-xl uppercase hover:bg-[#ffffff00] border-transparent hover:border-secondary border-[2px] w-[250px] h-[55px] font-medium rounded-full bg-secondary hover:text-secondary duration-200'>Matricule-se</button>
+      <button className='absolute bottom-20 text-xl uppercase hover:bg-[#00000066] border-transparent hover:border-secondary border-[2px] w-[250px] h-[55px] font-medium rounded-full bg-secondary hover:text-secondary duration-200'>Matricule-se</button>
     </div>
   )
 }

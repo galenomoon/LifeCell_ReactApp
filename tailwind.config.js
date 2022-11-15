@@ -40,7 +40,7 @@ module.exports = {
       slide_from_top_md: 'slide_from_top 1.4s',
       slide_from_top_lg: 'slide_from_top 2.4s',
       iphone_in: 'iphone_in 1.4s',
-      shine: 'shine 4s ease-in-out infinite'
+      shine: 'shine 3s ease-in-out infinite'
     },
     extend: {
       fontFamily: {
