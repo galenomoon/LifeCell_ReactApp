@@ -6,6 +6,7 @@ import Start from '../../components/Sections/Start';
 import Feedbacks from '../../components/Sections/Feedbacks';
 import Checklist from '../../components/Sections/Checklist';
 import Plans from '../../components/Sections/Plans';
+import Footer from '../../components/Footer';
 
 export default function LandingPage() {
 
@@ -16,6 +17,7 @@ export default function LandingPage() {
       <Feedbacks />
       <Checklist />
       <Plans />
+      <Footer/>
     </div>
   )
 }
