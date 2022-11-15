@@ -30,6 +30,13 @@ export default function PriceCard({ plan, index }) {
           {subtitle}
         </span>
       </div>
+      <div className='flex flex-col'>
+        {list.map(topic =>
+          <div className='flex items-center'>
+
+          </div>
+        )}
+      </div>
     </div>
   )
 }
