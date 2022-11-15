@@ -11,12 +11,12 @@ export default function Plans() {
   const prices = [
     {
       title: '3 meses',
-      price: 'R$99,99',
+      price: 'R$69,99',
       is_per_mouth: true,
-      subtitle: 'ou R$279,99 à vista',
+      subtitle: 'ou R$199,99 à vista',
       color: 'yellow',
       list: [
-        { text: 'Acesso à todas as aulas', enabled: true },
+        { text: 'Acesso de 3 meses à todas as aulas', enabled: true },
         { text: 'Suporte de 3 meses no Telegram', enabled: true },
         { text: 'Acesso de 3 meses à apostila', enabled: true },
         { text: 'Acesso vitalício à todas as aulas', enabled: false },
@@ -26,9 +26,9 @@ export default function Plans() {
     },
     {
       title: '12 meses',
-      price: 'R$24,99',
+      price: 'R$29,99',
       is_per_mouth: true,
-      subtitle: 'ou R$569,99 à vista',
+      subtitle: 'ou R$319,99 à vista',
       color: 'green',
       list: [
         { text: 'Acesso de um ano à todas as aulas', enabled: true },
@@ -41,7 +41,7 @@ export default function Plans() {
     },
     {
       title: 'Acesso vitalício',
-      price: 'R$499,99',
+      price: 'R$489,99',
       is_per_mouth: false,
       subtitle: 'pagamento único',
       color: 'blue',
@@ -64,7 +64,7 @@ export default function Plans() {
           <p>AULAS MINISTRADAS POR ALEX SENA</p>
         </div>
       </div>
-      <div className='flex w-full justify-evenly'>
+      <div className='flex w-full justify-center gap-[80px]'>
         {prices.map((plan, index) => <PriceCard plan={plan} index={index} />)}
       </div>
     </div>

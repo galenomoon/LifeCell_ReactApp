@@ -24,7 +24,7 @@ export default function Start() {
           </div>
         </div>
         <div className='text-[70px] font-bold leading-[80px]'>
-          + de <span className='text-secondary animate-shine'>200</span> novas formações de
+          + de <span className='text-secondary animate-shine'>200</span> novas<br /> formações de<br />
           profissionais
         </div>
         <div className='text-[70px] font-bold leading-[80px]'>

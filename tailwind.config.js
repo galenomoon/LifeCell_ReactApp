@@ -23,9 +23,9 @@ module.exports = {
         '100%': { transform: 'translateX(0%)', backgroundImage: "url('/src/assets/closed_iphone_13_pro_max.svg')" }
       },
       shine: {
-        '0%' : { filter: 'drop-shadow(0px 0px 6px #00c0ffaa)' },
+        '0%' : { filter: 'drop-shadow(0px 0px 6px #00c0ffee)' },
         '50%' : { filter: 'drop-shadow(0px 0px 6px #00c0ff00)' },
-        '100%' : { filter: 'drop-shadow(0px 0px 6px #00c0ffaa)' },
+        '100%' : { filter: 'drop-shadow(0px 0px 6px #00c0ffee)' },
       }
     },
 
