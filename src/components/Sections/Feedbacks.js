@@ -26,7 +26,7 @@ export default function Feedbacks() {
         Veja o que <span className='text-secondary animate-shine'>dizem</span> alguns dos novos
         profissionais <span className='text-secondary animate-shine'>formados</span> pela gente
       </div>
-      <div className='bg-[#000] flex items-center justify-around gap-[100px] px-[100px] bg-opacity-70 w-full py-10'>
+      <div className='bg-[#000] flex items-center justify-between gap-[80px] px-[100px] bg-opacity-70 w-full py-10'>
         {comments.map(comment => <FeedbackCard comment={comment} />)}
       </div>
     </div>
