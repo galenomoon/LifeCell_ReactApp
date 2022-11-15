@@ -21,6 +21,11 @@ module.exports = {
         '0%': { transform: 'translateX(100%)', backgroundImage: "url('/src/assets/opened_iphone_13_pro_max.svg')" },
         '50%': { backgroundImage: "url('/src/assets/opened_iphone_13_pro_max.svg')" },
         '100%': { transform: 'translateX(0%)', backgroundImage: "url('/src/assets/closed_iphone_13_pro_max.svg')" }
+      },
+      shine: {
+        '0%' : { filter: 'drop-shadow(0px 0px 6px #00c0ffaa)' },
+        '50%' : { filter: 'drop-shadow(0px 0px 6px #00c0ff00)' },
+        '100%' : { filter: 'drop-shadow(0px 0px 6px #00c0ffaa)' },
       }
     },
 
@@ -35,6 +40,7 @@ module.exports = {
       slide_from_top_md: 'slide_from_top 1.4s',
       slide_from_top_lg: 'slide_from_top 2.4s',
       iphone_in: 'iphone_in 1.4s',
+      shine: 'shine 3s ease-in-out infinite'
     },
     extend: {
       fontFamily: {
@@ -44,6 +50,9 @@ module.exports = {
         'default': "url('/src/assets/default.svg')",
         'opened_iphone': "url('/src/assets/opened_iphone_13_pro_max.svg')",
         'closed_iphone': "url('/src/assets/closed_iphone_13_pro_max.svg')",
+        'blue_lines': "url('/src/assets/blue_bg-lines.png')",
+        'green_lines': "url('/src/assets/green_bg-lines.png')",
+        'yellow_lines': "url('/src/assets/yellow_bg-lines.png')",
       },
       colors: {
         'secondary': '#00C0FF',
