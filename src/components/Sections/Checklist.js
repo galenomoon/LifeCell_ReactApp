@@ -26,14 +26,14 @@ export default function Checklist() {
   return (
     <div className='w-full flex flex-col items-center mb-[108px] gap-[60px]'>
       <div className='text-[60px] text-center font-bold w-full gap-2 leading-[70px]'>
-        No nosso <span className='text-secondary'>curso de manutenção
-          em smartphones</span> você <span className='text-secondary'>conta com</span>:
+        No nosso <span className='text-secondary animate-shine'>curso de manutenção
+          em smartphones</span> você <span className='text-secondary animate-shine'>conta com</span>:
       </div>
       <div className='flex items-center justify-around gap-[100px] px-[100px] w-full py-10'>
         <div className='flex flex-col gap-6'>
           {checklist_left.map(item =>
             <div className='flex items-center gap-2 text-2xl font-bold'>
-              <ImCheckboxChecked size={20} className='text-secondary' />
+              <ImCheckboxChecked size={20} className='text-secondary animate-shine' />
               <p>{item}</p>
             </div>
           )}
@@ -41,7 +41,7 @@ export default function Checklist() {
         <div className='flex flex-col gap-6'>
           {checklist_right.map(item =>
             <div className='flex items-center gap-2 text-2xl font-bold'>
-              <ImCheckboxChecked size={20} className='text-secondary' />
+              <ImCheckboxChecked size={20} className='text-secondary animate-shine' />
               <p>{item}</p>
             </div>
           )}

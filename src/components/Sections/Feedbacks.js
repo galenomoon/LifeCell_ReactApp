@@ -23,8 +23,8 @@ export default function Feedbacks() {
   return (
     <div className='w-full flex flex-col items-center my-[108px] gap-[40px]'>
       <div className='text-[60px] text-center font-bold w-full gap-2 leading-[70px]'>
-        Veja o que <span className='text-secondary'>dizem</span> alguns dos novos
-        profissionais <span className='text-secondary'>formados</span> pela gente
+        Veja o que <span className='text-secondary animate-shine'>dizem</span> alguns dos novos
+        profissionais <span className='text-secondary animate-shine'>formados</span> pela gente
       </div>
       <div className='bg-[#000] flex items-center justify-around gap-[100px] px-[100px] bg-opacity-70 w-full py-10'>
         {comments.map(comment => <FeedbackCard comment={comment} />)}

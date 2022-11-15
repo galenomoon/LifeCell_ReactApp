@@ -6,3 +6,13 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.text-light:hover{
+  filter: drop-shadow(0 0px 6px #ffffffaa);
+  transition: 0.3s ease-in-out;
+}
+
+.text-light{
+  filter: drop-shadow(0 0px 6px #ffffff00);
+  transition: 0.3s ease-in-out;
+}
