@@ -8,7 +8,7 @@ import IPhone from '../IPhone'
 
 export default function Start({ section_ref }) {
   return (
-    <div className='w-full flex p-[64px]'>
+    <div className='w-full flex py-[64px] px-[80px]'>
       <div className='w-full h-full flex flex-col mt-9 gap-[100px] animate-slide_from_left_md'>
         <div>
           <p className='font-semibold text-secondary text-xl animate-shine' ref={section_ref} >CURSO ONLINE DE MANUTENÇÃO DE SMARTPHONES</p>
@@ -35,9 +35,9 @@ export default function Start({ section_ref }) {
           </p>
         </div>
       </div>
-      <div className='h-[840px] w-fit'>
-        <IPhone />
-      </div>
+        <div className='h-[840px] w-fit'>
+          <IPhone />
+        </div>
     </div>
   )
 }

@@ -19,9 +19,9 @@ export default function TopNav({ refs, scrollToSection }) {
     <div ref={top_nav_ref} className='flex items-center justify-between px-[64px] py-[22px] uppercase'>
       <img src={logo} className='w-[200px] animate-slide_from_top_md' />
       <div className='flex gap-[44px] animate-slide_from_top_md'>
-        <p onClick={() => scrollToSection(refs.first_section)} className='cursor-pointer hover:text-secondary duration-75'>Início</p>
         <p onClick={() => scrollToSection(refs.second_section)} className='cursor-pointer hover:text-secondary duration-75'>Feedback</p>
         <p onClick={() => scrollToSection(refs.third_section)} className='cursor-pointer hover:text-secondary duration-75'>Sobre o Curso</p>
+        <p onClick={() => scrollToSection(refs.fourty_section)} className='cursor-pointer hover:text-secondary duration-75'>Planos</p>
       </div>
       <div className='flex gap-[44px] font-bold items-center animate-slide_from_top_md'>
         <Link to='/login' className='cursor-pointer hover:text-secondary duration-75'>Entrar</Link>
