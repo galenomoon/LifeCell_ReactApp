@@ -3,7 +3,7 @@ import React from 'react'
 //components
 import FeedbackCard from '../FeedbackCard'
 
-export default function Feedbacks() {
+export default function Feedbacks({ section_ref }) {
 
   const comments = [
     {
@@ -22,7 +22,7 @@ export default function Feedbacks() {
 
   return (
     <div className='w-full flex flex-col items-center my-[108px] gap-[40px]'>
-      <div className='text-[60px] text-center font-bold w-[80%] gap-2 leading-[70px]'>
+      <div className='text-[60px] text-center font-bold w-[80%] gap-2 leading-[70px]' ref={section_ref}>
         Veja o que <span className='text-secondary animate-shine'>dizem</span> alguns dos novos
         profissionais <span className='text-secondary animate-shine'>formados</span> pela gente
       </div>

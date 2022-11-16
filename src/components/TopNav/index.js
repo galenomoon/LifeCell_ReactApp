@@ -6,21 +6,20 @@ import logo from '../../assets/logo_lifecell_horizontal.svg'
 //styles
 import { BsArrowUpShort } from 'react-icons/bs'
 
-export default function TopNav() {
+export default function TopNav({ refs, scrollToSection }) {
   const top_nav_ref = React.useRef()
 
   return (
     <div ref={top_nav_ref} className='flex items-center justify-between px-[64px] py-[22px] uppercase'>
       <img src={logo} className='w-[200px] animate-slide_from_top_md' />
       <div className='flex gap-[44px] animate-slide_from_top_md'>
-        <p className='cursor-pointer hover:text-secondary duration-75'>Início</p>
-        <p className='cursor-pointer hover:text-secondary duration-75'>Feedback</p>
-        <p className='cursor-pointer hover:text-secondary duration-75'>Sobre o Curso</p>
-        <p className='cursor-pointer hover:text-secondary duration-75'>Contato</p>
+        <p onClick={() => scrollToSection(refs.first_section)} className='cursor-pointer hover:text-secondary duration-75'>Início</p>
+        <p onClick={() => scrollToSection(refs.second_section)} className='cursor-pointer hover:text-secondary duration-75'>Feedback</p>
+        <p onClick={() => scrollToSection(refs.third_section)} className='cursor-pointer hover:text-secondary duration-75'>Sobre o Curso</p>
       </div>
       <div className='flex gap-[44px] font-bold items-center animate-slide_from_top_md'>
         <p className='cursor-pointer hover:text-secondary duration-75'>Entrar</p>
-        <button className='uppercase hover:bg-[#fff] px-[22px] py-[8px] rounded-full bg-secondary hover:text-secondary duration-75'>Matricule-se</button>
+        <button onClick={() => scrollToSection(refs.fourty_section)} className='uppercase hover:bg-[#fff] px-[22px] py-[8px] rounded-full bg-secondary hover:text-secondary duration-75'>Matricule-se</button>
       </div>
       <button title='Voltar ao topo' onClick={() => top_nav_ref?.current?.scrollIntoView({ behavior: 'smooth' })} className='bg-secondary hover:bg-white hover:text-secondary right-8 bottom-10 duration-100 fixed z-[100] rounded-full'>
         <BsArrowUpShort size={50} />
