@@ -4,7 +4,8 @@ import React from 'react'
 import logo from '../../assets/logo_lifecell_horizontal.svg'
 
 //styles
-import { BsArrowUpShort } from 'react-icons/bs'
+import { BsArrowUpShort, BsWhatsapp, BsInstagram, BsYoutube } from 'react-icons/bs'
+import Contact from '../Contact'
 
 export default function TopNav({ refs, scrollToSection }) {
   const top_nav_ref = React.useRef()
@@ -21,6 +22,12 @@ export default function TopNav({ refs, scrollToSection }) {
         <p className='cursor-pointer hover:text-secondary duration-75'>Entrar</p>
         <button onClick={() => scrollToSection(refs.fourty_section)} className='uppercase hover:bg-[#fff] px-[22px] py-[8px] rounded-full bg-secondary hover:text-secondary duration-75'>Matricule-se</button>
       </div>
+      <div className='gap-4 flex flex-col fixed top-[200px] left-0 animate-slide_from_left_md'>
+        <Contact link='' icon={<BsWhatsapp size={30} />} />
+        <Contact link='https://www.youtube.com/@lifecell-centrotecnico1599' icon={<BsYoutube size={30} />} />
+        <Contact link='' icon={<BsInstagram size={30} />} />
+      </div>
+
       <button title='Voltar ao topo' onClick={() => top_nav_ref?.current?.scrollIntoView({ behavior: 'smooth' })} className='bg-secondary hover:bg-white hover:text-secondary right-8 bottom-10 duration-100 fixed z-[100] rounded-full'>
         <BsArrowUpShort size={50} />
       </button>
