@@ -17,7 +17,7 @@ export default function LandingPage() {
   const scrollToSection = (ref) => ref?.current?.scrollIntoView({ behavior: 'smooth' })
 
   return (
-    <div className='flex flex-col h-full w-full overflow-x-hidden'>
+    <div className='flex flex-col h-full w-full overflow-x-hidden gap-[150px]'>
       <TopNav scrollToSection={scrollToSection} refs={{ first_section, second_section, third_section, fourty_section }} />
       <Start section_ref={first_section} />
       <Feedbacks section_ref={second_section} />
