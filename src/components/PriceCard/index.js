@@ -32,8 +32,8 @@ export default function PriceCard({ plan, index }) {
         </span>
       </div>
       <div className='flex flex-col gap-4 text-light'>
-        {list.map(topic =>
-          <div className='flex items-center gap-2 text-lg'>
+        {list.map((topic, index) =>
+          <div className='flex items-center gap-2 text-lg' key={index}>
             <BsCheck2 size={20} /> {topic.text}
           </div>
         )}

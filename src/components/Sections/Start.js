@@ -6,12 +6,12 @@ import google from '../../assets/googletext.svg'
 //components
 import IPhone from '../IPhone'
 
-export default function Start() {
+export default function Start({ section_ref }) {
   return (
     <div className='w-full flex p-[64px]'>
       <div className='w-full h-full flex flex-col mt-9 gap-[100px] animate-slide_from_left_md'>
         <div>
-          <p className='font-semibold text-secondary text-xl animate-shine'>CURSO ONLINE DE MANUTENÇÃO DE SMARTPHONES</p>
+          <p className='font-semibold text-secondary text-xl animate-shine' ref={section_ref} >CURSO ONLINE DE MANUTENÇÃO DE SMARTPHONES</p>
           <div className='text-[70px] font-bold leading-[80px]'>
             <p>
               Aprenda a ver

@@ -65,7 +65,7 @@ export default function Plans() {
         </div>
       </div>
       <div className='flex w-full justify-center gap-[80px]'>
-        {prices.map((plan, index) => <PriceCard plan={plan} index={index} />)}
+        {prices.map((plan, index) => <PriceCard plan={plan} index={index} key={index} />)}
       </div>
     </div>
   )

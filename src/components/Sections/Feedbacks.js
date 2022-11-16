@@ -27,7 +27,7 @@ export default function Feedbacks() {
         profissionais <span className='text-secondary animate-shine'>formados</span> pela gente
       </div>
       <div className='bg-[#000] flex items-center justify-center gap-[80px] px-[100px] bg-opacity-70 w-full py-10'>
-        {comments.map(comment => <FeedbackCard comment={comment} />)}
+        {comments.map((comment, index) => <FeedbackCard comment={comment} key={index} />)}
       </div>
     </div>
   )

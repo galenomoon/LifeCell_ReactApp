@@ -31,16 +31,16 @@ export default function Checklist() {
       </div>
       <div className='flex items-center justify-around gap-[100px] px-[100px] w-full py-10'>
         <div className='flex flex-col gap-6'>
-          {checklist_left.map(item =>
-            <div className='flex items-center gap-2 text-2xl font-bold'>
+          {checklist_left.map((item, index) =>
+            <div className='flex items-center gap-2 text-2xl font-bold' key={index}>
               <ImCheckboxChecked size={20} className='text-secondary animate-shine' />
               <p>{item}</p>
             </div>
           )}
         </div>
         <div className='flex flex-col gap-6'>
-          {checklist_right.map(item =>
-            <div className='flex items-center w-full gap-2 text-2xl font-bold'>
+          {checklist_right.map((item, index) =>
+            <div className='flex items-center w-full gap-2 text-2xl font-bold' key={index}>
               <ImCheckboxChecked size={20} className='text-secondary animate-shine' />
               <p className='whitespace-nowrap'>{item}</p>
             </div>

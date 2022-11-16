@@ -19,7 +19,7 @@ export default function FeedbackCard({ comment }) {
         {comment.comment}
       </p>
       <div className='flex gap-2 text-[#FFC700]'>
-        {Array(5).fill().map(star => <BsFillStarFill size={18} />)}
+        {Array(5).fill().map((star, index) => <BsFillStarFill size={18} key={index} />)}
       </div>
     </div>
   )
