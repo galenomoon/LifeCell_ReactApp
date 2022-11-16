@@ -9,6 +9,9 @@ import { BsArrowUpShort, BsWhatsapp, BsInstagram, BsYoutube } from 'react-icons/
 //components
 import Contact from '../Contact'
 
+//deeps
+import { Link } from 'react-router-dom'
+
 export default function TopNav({ refs, scrollToSection }) {
   const top_nav_ref = React.useRef()
 
@@ -21,10 +24,10 @@ export default function TopNav({ refs, scrollToSection }) {
         <p onClick={() => scrollToSection(refs.third_section)} className='cursor-pointer hover:text-secondary duration-75'>Sobre o Curso</p>
       </div>
       <div className='flex gap-[44px] font-bold items-center animate-slide_from_top_md'>
-        <p className='cursor-pointer hover:text-secondary duration-75'>Entrar</p>
+        <Link to='/login' className='cursor-pointer hover:text-secondary duration-75'>Entrar</Link>
         <button onClick={() => scrollToSection(refs.fourty_section)} className='uppercase hover:bg-[#fff] px-[22px] py-[8px] rounded-full bg-secondary hover:text-secondary duration-75'>Matricule-se</button>
       </div>
-      <div className='gap-4 flex flex-col fixed top-[200px] left-0 animate-slide_from_left_md z-[1000]'>
+      <div className='gap-4 flex flex-col fixed top-[40vh] left-0 animate-slide_from_left_md z-[1000]'>
         <Contact link='' icon={<BsWhatsapp size={30} />} />
         <Contact link='https://www.youtube.com/@lifecell-centrotecnico1599' icon={<BsYoutube size={30} />} />
         <Contact link='' icon={<BsInstagram size={30} />} />
