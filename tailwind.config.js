@@ -31,6 +31,11 @@ module.exports = {
         '50%': { filter: 'drop-shadow(0px 0px 6px #00c0ff00)' },
         '100%': { filter: 'drop-shadow(0px 0px 6px #00c0ffee)' },
       },
+      shine_xl: {
+        '0%': { filter: 'drop-shadow(0px 0px 12px #00c0ff)' },
+        '50%': { filter: 'drop-shadow(0px 0px 6px #00c0ff00)' },
+        '100%': { filter: 'drop-shadow(0px 0px 12px #00c0ff)' },
+      },
       fade: {
         '0%': { opacity: '0' },
         '100%': { opacity: '1' }
@@ -54,7 +59,8 @@ module.exports = {
       fade_md: 'fade 1.4s',
       fade_lg: 'fade 2.4s',
       iphone_in: 'iphone_in 1.4s',
-      shine: 'shine 3s ease-in-out infinite'
+      shine: 'shine 3s ease-in-out infinite',
+      shine_xl: 'shine_xl 3s ease-in-out infinite'
     },
     extend: {
       fontFamily: {

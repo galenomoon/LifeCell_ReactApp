@@ -54,7 +54,7 @@ export default function Plans({ section_ref }) {
   ]
 
   return (
-    <div className='w-full flex flex-col items-center gap-[40px]' ref={section_ref}>
+    <div className='w-full flex flex-col items-center gap-[40px] z-[200]' ref={section_ref}>
       <div className='flex flex-col items-center'>
         <div className='text-[70px] font-bold'>
           CURSO COMPLETO <span className='text-secondary animate-shine'>100% ONLINE</span>

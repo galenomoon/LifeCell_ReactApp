@@ -24,7 +24,7 @@ export default function Checklist({ section_ref }) {
     'SUBSTITUIÇÃO DE TOUCH E LCD'
   ]
   return (
-    <div className='w-full flex flex-col items-center gap-[60px]' ref={section_ref}>
+    <div className='w-full flex flex-col items-center gap-[60px] z-[200]' ref={section_ref}>
       <div className='text-[60px] text-center font-bold w-[80%] gap-2 leading-[70px]'>
         No nosso <span className='text-secondary animate-shine'>curso de manutenção
           em smartphones</span> você <span className='text-secondary animate-shine'>conta com</span>:
