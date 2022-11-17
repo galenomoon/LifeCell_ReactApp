@@ -30,7 +30,7 @@ export default function TopNav({ refs, scrollToSection, openModal }) {
         <Contact link='https://instagram.com/alex.senag?r=nametag' icon={<BsInstagram size={30} />} />
       </div>
 
-      <button title='Voltar ao topo' onClick={() => top_nav_ref?.current?.scrollIntoView({ behavior: 'smooth' })} className='bg-secondary hover:bg-white hover:text-secondary right-8 bottom-10 duration-100 fixed z-[100] rounded-full'>
+      <button title='Voltar ao topo' onClick={() => refs.first_section?.current?.scrollIntoView({ behavior: 'smooth' })} className='bg-secondary hover:bg-white hover:text-secondary right-8 bottom-10 duration-100 fixed z-[100] rounded-full'>
         <BsArrowUpShort size={50} />
       </button>
     </div>
