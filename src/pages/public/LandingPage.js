@@ -34,7 +34,7 @@ export default function LandingPage() {
 
   return (
     <>
-      <canvas id="confetti-holder" className='absolute z-[1] animate-shine' />
+      <canvas id="confetti-holder" className='absolute z-[1] w-full animate-shine overflow-hidden' />
       <div className='flex flex-col h-full w-full overflow-x-hidden gap-[150px] z-[4000]'>
         <TopNav scrollToSection={scrollToSection} refs={{ first_section, second_section, third_section, fourty_section }} openModal={() => setShowModal(true)} />
         <Start section_ref={first_section} />

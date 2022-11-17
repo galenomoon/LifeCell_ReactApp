@@ -13,7 +13,7 @@ export default function TopNav({ refs, scrollToSection, openModal }) {
   const top_nav_ref = React.useRef()
 
   return (
-    <div ref={top_nav_ref} className='flex w-full bg-gradient-to-b from-black to-transparent z-[1000] items-center justify-between px-[64px] py-[22px] uppercase'>
+    <div ref={top_nav_ref} className='flex w-full fixed bg-gradient-to-b from-black to-transparent z-[1000] items-center justify-between px-[64px] py-[22px] uppercase'>
       <img src={logo} className='w-[200px] animate-slide_from_top_md' />
       <div className='flex gap-[44px] animate-slide_from_top_md'>
         <p onClick={() => scrollToSection(refs.second_section)} className='cursor-pointer hover:text-secondary duration-75'>Feedback</p>
