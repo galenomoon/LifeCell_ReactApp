@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 export default function LoginForm() {
   return (
-    <form className="flex flex-col items-center justify-evenly h-full p-10">
+    <form className="flex flex-col items-center justify-evenly h-full p-10 w-full">
       <div className='text-[40px] text-center font-bold w-[80%] gap-2 leading-[70px] text-secondary animate-shine'>
         Entrar
       </div>

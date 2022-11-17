@@ -28,7 +28,7 @@ export default function LandingPage() {
       <Checklist section_ref={third_section} />
       <Plans section_ref={fourty_section} />
       <Footer />
-      <Modal show={show_modal} close={() => setShowModal(false)} children={<LoginForm/>} />
+      <Modal className='w-[450px]' show={show_modal} close={() => setShowModal(false)} children={<LoginForm/>} />
     </div>
   )
 }
