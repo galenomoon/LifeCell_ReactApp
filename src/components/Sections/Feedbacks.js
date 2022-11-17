@@ -21,7 +21,7 @@ export default function Feedbacks({ section_ref }) {
   ]
 
   return (
-    <div className='w-full flex flex-col items-center gap-[40px]' ref={section_ref}>
+    <div className='w-full flex flex-col items-center gap-[40px] z-[200]' ref={section_ref}>
       <div className='text-[60px] text-center font-bold w-[80%] gap-2 leading-[70px]'>
         Veja o que <span className='text-secondary animate-shine'>dizem</span> alguns dos novos
         profissionais <span className='text-secondary animate-shine'>formados</span> pela gente

@@ -9,6 +9,7 @@ import Login from '../pages/public/Login';
 import { AdminRoutes, StudentRoutes } from './AuthenticatedRoutes';
 
 export default function ApplicationRouter() {
+
   return (
     <Router>
       <div className='bg-default bg-cover w-full h-full text-[#fff] font-poppins'>
