@@ -10,6 +10,7 @@ export default function Plans({ section_ref }) {
 
   const prices = [
     {
+      id: 1,
       title: '3 meses',
       price: 'R$69,99',
       is_per_mouth: true,
@@ -25,6 +26,7 @@ export default function Plans({ section_ref }) {
       ]
     },
     {
+      id: 2,
       title: '12 meses',
       price: 'R$29,99',
       is_per_mouth: true,
@@ -40,6 +42,7 @@ export default function Plans({ section_ref }) {
       ]
     },
     {
+      id: 3,
       title: 'Acesso vitalício',
       price: 'R$489,99',
       is_per_mouth: false,

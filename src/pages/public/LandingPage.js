@@ -42,7 +42,12 @@ export default function LandingPage() {
 
   const handleAuth = () => navigate('/student/home')
 
-  const handleSignUp = (plan) => {
+  const handleSignUp = () => {
+    setShowModalSignUp(false)
+    setShowModalLogin(true)
+  }
+
+  const showSignUpModal = (plan) => {
     setPlan(plan)
     setShowModalSignUp(true)
     setShowModalLogin(false)
@@ -52,7 +57,7 @@ export default function LandingPage() {
     <>
       <canvas id="confetti-holder" className='absolute z-[1] w-full animate-shine overflow-hidden' />
       <div className='flex flex-col h-full w-full overflow-x-hidden gap-[150px] z-[4000]'>
-        <LandingPageContext.Provider value={{ handleSignUp }}>
+        <LandingPageContext.Provider value={{ showSignUpModal }}>
           <TopNav scrollToSection={scrollToSection} refs={{ first_section, second_section, third_section, fourty_section }} openModal={() => setShowModalLogin(true)} />
           <Start section_ref={first_section} />
           <Feedbacks section_ref={second_section} />
@@ -60,7 +65,7 @@ export default function LandingPage() {
           <Plans section_ref={fourty_section} />
           <Footer />
           <Modal className='w-[450px]' show={show_modal_login} close={() => setShowModalLogin(false)} children={<LoginForm login={() => handleAuth()} />} />
-          <Modal className='w-fit ' show={show_modal_signup} close={() => setShowModalSignUp(false)} children={<SignUpForm  plan={plan} login={() => handleAuth()} />} />
+          <Modal className='min-w-fit w-[1000px]' show={show_modal_signup} close={() => setShowModalSignUp(false)} children={<SignUpForm  plan={plan} handleSignUp={handleSignUp} />} />
         </LandingPageContext.Provider>
       </div>
     </>
