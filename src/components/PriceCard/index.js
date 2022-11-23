@@ -1,7 +1,9 @@
 import React from 'react'
 import { BsCheck2 } from 'react-icons/bs'
+import { LandingPageContext } from '../../pages/public/LandingPage'
 
 export default function PriceCard({ plan, index }) {
+  const { handleSignUp = () => { } } = React.useContext(LandingPageContext)
   const { color, title = 'X meses', price = 'R$99,99', is_per_mouth = true, subtitle = 'ou R$280,00 à vista', list = [] } = plan
   const [colors, setColors] = React.useState({ font: '', bg: '' })
 
@@ -38,7 +40,7 @@ export default function PriceCard({ plan, index }) {
           </div>
         )}
       </div>
-      <button className='absolute bottom-20 text-xl uppercase hover:bg-[#00000066] border-transparent hover:border-secondary border-[2px] w-[250px] h-[55px] font-medium rounded-full bg-secondary hover:text-secondary duration-200'>Matricule-se</button>
+      <button onClick={() => handleSignUp(plan)} className='absolute bottom-20 text-xl uppercase hover:bg-[#00000066] border-transparent hover:border-secondary border-[2px] w-[250px] h-[55px] font-medium rounded-full bg-secondary hover:text-secondary duration-200'>Matricule-se</button>
     </div>
   )
 }

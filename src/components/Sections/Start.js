@@ -12,7 +12,7 @@ export default function Start({ section_ref }) {
       <div className='w-full h-full flex flex-col mt-9 gap-[100px] animate-slide_from_left_md'>
         <div>
           <p className='font-semibold text-secondary text-xl animate-shine' >CURSO ONLINE DE MANUTENÇÃO DE SMARTPHONES</p>
-          <div className='text-[70px] font-bold leading-[80px]'>
+          <div className='text-[4.4rem] font-bold leading-[80px]'>
             <p>
               Aprenda a ver
             </p>
@@ -23,11 +23,11 @@ export default function Start({ section_ref }) {
             com outros olhos
           </div>
         </div>
-        <div className='text-[70px] font-bold leading-[80px]'>
+        <div className='text-[4.4rem] font-bold leading-[80px]'>
           + de <span className='text-secondary animate-shine'>200</span> novas<br /> formações de<br />
           profissionais
         </div>
-        <div className='text-[70px] font-bold leading-[80px]'>
+        <div className='text-[4.4rem] font-bold leading-[80px]'>
           Temos a <span className='text-secondary animate-shine'>melhor</span>
           <p className='whitespace-nowrap flex relative'>
             avaliações no

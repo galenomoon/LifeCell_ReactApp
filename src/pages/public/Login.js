@@ -1,5 +1,5 @@
 import React from 'react'
-import LoginForm from '../../components/LoginForm'
+import { LoginForm } from '../../components/Form'
 import logo from '../../assets/logo_lifecell_horizontal.svg'
 
 export default function Login() {
