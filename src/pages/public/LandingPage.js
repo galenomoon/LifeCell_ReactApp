@@ -2,6 +2,7 @@ import React, { createContext } from 'react'
 
 //deeps
 import { useNavigate } from 'react-router-dom'
+import api_client from '../../config/api_client';
 
 //components
 import TopNav from '../../components/TopNav'
@@ -31,6 +32,7 @@ export default function LandingPage() {
   const fourty_section = React.createRef(() => { })
 
   React.useEffect(() => {
+    localStorage.clear();
     const confettiSettings = { "target": "confetti-holder", "max": "100", "size": "0.7", "animate": true, "props": ["circle"], "colors": [[0, 192, 255], [0, 192, 255], [0, 192, 255]], "clock": "3", "rotate": false, "width": "1920", "height": "4000", "respawn": true };
     const confetti = new ConfettiGenerator(confettiSettings);
     confetti?.render();
@@ -42,9 +44,16 @@ export default function LandingPage() {
 
   const handleAuth = () => navigate('/student/home')
 
-  const handleSignUp = () => {
-    setShowModalSignUp(false)
-    setShowModalLogin(true)
+  const handleSignUp = async (user) => {
+    // if (user.password === user.password_confirmation) {
+    //   await api_client.post('/auth/', user).then(res => {
+    //     console.log('token', res.data.token)
+    //     alert('Usuário criado com sucesso!')
+    //     navigate('/student/home')
+    //   }).catch(err => console.log(err))
+    //   return
+    // }
+    // alert('Senhas não conferem')
   }
 
   const showSignUpModal = (plan) => {
@@ -65,7 +74,7 @@ export default function LandingPage() {
           <Plans section_ref={fourty_section} />
           <Footer />
           <Modal className='w-[450px]' show={show_modal_login} close={() => setShowModalLogin(false)} children={<LoginForm login={() => handleAuth()} />} />
-          <Modal className='min-w-fit w-[1000px]' show={show_modal_signup} close={() => setShowModalSignUp(false)} children={<SignUpForm  plan={plan} handleSignUp={handleSignUp} />} />
+          <Modal className='min-w-fit w-[1000px]' show={show_modal_signup} close={() => setShowModalSignUp(false)} children={<SignUpForm plan={plan} handleSignUp={handleSignUp} />} />
         </LandingPageContext.Provider>
       </div>
     </>

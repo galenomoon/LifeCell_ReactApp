@@ -40,12 +40,12 @@ export function LoginForm({ login = () => { } }) {
 
 export function SignUpForm({ plan, handleSignUp = () => { } }) {
   const [colors, setColors] = React.useState({ font: '' })
-  const [user, setUser] = React.useState({ 
-    email: '', 
+  const [user, setUser] = React.useState({
+    email: '',
     name: '',
-    password: '', 
-    confirm_password: '',
-    plan: plan.id
+    password: '',
+    password_confirmation: '',
+    plan_id: plan.id
   })
 
   React.useEffect(() => {
@@ -61,43 +61,43 @@ export function SignUpForm({ plan, handleSignUp = () => { } }) {
   }, [plan])
 
   return (
-    <div className='flex flex-col items-center justify-evenly h-full p-10 gap-8'>
+    <form onSubmit={(e) => [e.preventDefault(), handleSignUp(user)]} className='flex flex-col items-center justify-evenly h-full p-10 gap-8'>
       <div className='text-[40px] text-center font-bold  text-secondary animate-shine'>
         Matrícula
       </div>
       <div className='flex justify-between w-full px-10 gap-10 h-full'>
-        <form className="flex flex-col items-center justify-evenly h-full w-full">
+        <div className="flex flex-col items-center justify-evenly h-full w-full">
           <div className='flex flex-col gap-4 w-full h-full'>
-            <div className='flex flex-col gap-1 w-full'>
-              <p>Email:</p>
-              <div className='flex items-center w-full gap-2 bg-[#ffffff33] rounded-xl px-3'>
-                <FaUser size={25} />
-                <input required placeholder='Digite seu Email' type='email' className=' w-full bg-transparent outline-none p-2' />
-              </div>
-            </div>
             <div className='flex flex-col gap-1 w-full'>
               <p>Nome:</p>
               <div className='flex items-center w-full gap-2 bg-[#ffffff33] rounded-xl px-3'>
                 <FaUser size={25} />
-                <input required placeholder='Digite seu Nome' type='text' className=' w-full bg-transparent outline-none p-2' />
+                <input value={user.name} onChange={e => setUser({ ...user, name: e.target.value })} required placeholder='Digite seu Nome' type='text' className=' w-full bg-transparent outline-none p-2' />
+              </div>
+            </div>
+            <div className='flex flex-col gap-1 w-full'>
+              <p>Email:</p>
+              <div className='flex items-center w-full gap-2 bg-[#ffffff33] rounded-xl px-3'>
+                <FaUser size={25} />
+                <input value={user.email} onChange={e => setUser({ ...user, email: e.target.value })} required placeholder='Digite seu Email' type='email' className=' w-full bg-transparent outline-none p-2' />
               </div>
             </div>
             <div className='flex flex-col gap-1 w-full'>
               <p>Senha:</p>
               <div className='flex items-center w-full gap-2 bg-[#ffffff33] rounded-xl px-3'>
                 <IoMdLock size={25} />
-                <input required placeholder='Digite sua Senha' type='password' className=' w-full bg-transparent outline-none p-2' />
+                <input value={user.password} onChange={e => setUser({ ...user, password: e.target.value })} required placeholder='Digite sua Senha' type='password' className=' w-full bg-transparent outline-none p-2' />
               </div>
             </div>
             <div className='flex flex-col gap-1 w-full'>
               <p>Confirmar Senha:</p>
               <div className='flex items-center w-full gap-2 bg-[#ffffff33] rounded-xl px-3'>
                 <IoMdLock size={25} />
-                <input required placeholder='Confirme sua Senha' type='password' className=' w-full bg-transparent outline-none p-2' />
+                <input value={user.password_confirmation} onChange={e => setUser({ ...user, password_confirmation: e.target.value })} required placeholder='Confirme sua Senha' type='password' className=' w-full bg-transparent outline-none p-2' />
               </div>
             </div>
           </div>
-        </form>
+        </div>
         <div className="flex flex-col items-center justify-center h-full w-full rounded-2xl gap-4">
           <div className="flex flex-col items-center justify-center h-full w-full rounded-2xl p-5 leading-tight bg-[#303030]">
             <span className={`text-[26px] font-bold uppercase ${colors.font}`}>
@@ -121,9 +121,9 @@ export function SignUpForm({ plan, handleSignUp = () => { } }) {
 
         </div>
       </div>
-      <button onClick={() => handleSignUp(user)} className='bg-secondary text-center duration-100 hover:bg-transparent hover:text-secondary border-[2px] border-transparent hover:border-secondary w-[50%] py-2 uppercase font-semibold rounded-full'>
+      <button type='submit' className='bg-secondary text-center duration-100 hover:bg-transparent hover:text-secondary border-[2px] border-transparent hover:border-secondary w-[50%] py-2 uppercase font-semibold rounded-full'>
         Confirmar
       </button>
-    </div>
+    </form>
   )
 }
