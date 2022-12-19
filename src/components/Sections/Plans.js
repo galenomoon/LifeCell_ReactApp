@@ -57,9 +57,9 @@ export default function Plans({ section_ref }) {
   ]
 
   return (
-    <div className='w-full flex flex-col items-center gap-[40px] z-[200]' ref={section_ref}>
-      <div className='flex flex-col items-center'>
-        <div className='text-[4.4rem] font-bold'>
+    <div className='w-full flex flex-col sm:text-center items-center gap-[40px] z-[200]' ref={section_ref}>
+      <div className='flex flex-col items-center justify-center'>
+        <div className='md:text-[4.4rem] sm:text-[3rem] font-bold sm:leading-[50px] md:leading-normal'>
           CURSO COMPLETO <span className='text-secondary animate-shine'>100% ONLINE</span>
         </div>
         <div className='flex gap-2 items-center font-semibold text-[22px]'>
@@ -67,7 +67,7 @@ export default function Plans({ section_ref }) {
           <p>AULAS MINISTRADAS POR ALEX SENA</p>
         </div>
       </div>
-      <div className='flex w-full justify-center gap-[2rem]'>
+      <div className='flex md:flex-row sm:flex-col w-full items-center justify-center gap-[2rem]'>
         {prices.map((plan, index) => <PriceCard plan={plan} index={index} key={index} />)}
       </div>
     </div>

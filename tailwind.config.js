@@ -4,6 +4,10 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      sm: "320px",
+      md: "768px",
+    },
     keyframes: {
       slide_from_right: {
         '0%': { transform: 'translateX(100%)' },

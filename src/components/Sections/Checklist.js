@@ -12,7 +12,7 @@ export default function Checklist({ section_ref }) {
     'APOSTILA',
     'INDICAÇÃO DE FORNECEDORES',
     'INDICAÇÃO DE EQUIPAMENTOS',
-    'AULAS COM SAMSUNG, MOTOROLA E APPLE'
+    'SAMSUNG, MOTOROLA E APPLE'
   ]
   const checklist_right = [
     'ANÁLISE E DIAGNÓSTICOS DE DEFEITOS',
@@ -25,24 +25,24 @@ export default function Checklist({ section_ref }) {
   ]
   return (
     <div className='w-full flex flex-col items-center gap-[60px] z-[200]' ref={section_ref}>
-      <div className='text-[60px] text-center font-bold w-[80%] gap-2 leading-[70px]'>
+      <div className='md:text-[60px] sm:text-[40px] text-center font-bold w-[80%] gap-2 md:leading-[70px] sm:leading-[50px]'>
         No nosso <span className='text-secondary animate-shine'>curso de manutenção
           em smartphones</span> você <span className='text-secondary animate-shine'>conta com</span>:
       </div>
-      <div className='flex items-center justify-around gap-[100px] px-[100px] w-full py-10'>
-        <div className='flex flex-col gap-6'>
+      <div className='flex md:flex-row sm:flex-col items-center justify-around sm:gap-[60px] md:gap-[100px] sm:px-[30px] md:px-[100px] w-full sm:py-2 md:py-10'>
+        <div className='flex flex-col gap-6 w-full'>
           {checklist_left.map((item, index) =>
-            <div className='flex items-center gap-2 text-2xl font-bold' key={index}>
+            <div className='flex items-baseline gap-2 text-2xl font-bold w-full' key={index}>
               <ImCheckboxChecked size={20} className='text-secondary animate-shine' />
               <p>{item}</p>
             </div>
           )}
         </div>
-        <div className='flex flex-col gap-6'>
+        <div className='flex flex-col gap-6 w-full'>
           {checklist_right.map((item, index) =>
-            <div className='flex items-center w-full gap-2 text-2xl font-bold' key={index}>
+            <div className='flex items-baseline w-full gap-2 text-2xl font-bold ' key={index}>
               <ImCheckboxChecked size={20} className='text-secondary animate-shine' />
-              <p className='whitespace-nowrap'>{item}</p>
+              <p>{item}</p>
             </div>
           )}
         </div>

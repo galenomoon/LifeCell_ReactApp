@@ -22,11 +22,11 @@ export default function Feedbacks({ section_ref }) {
 
   return (
     <div className='w-full flex flex-col items-center gap-[40px] z-[200]' ref={section_ref}>
-      <div className='text-[60px] text-center font-bold w-[80%] gap-2 leading-[70px]'>
+      <div className='md:text-[60px] sm:text-[40px] text-center font-bold w-[80%] gap-2 md:leading-[70px] sm:leading-[50px]'>
         Veja o que <span className='text-secondary animate-shine'>dizem</span> alguns dos novos
         profissionais <span className='text-secondary animate-shine'>formados</span> pela gente
       </div>
-      <div className='bg-[#000] flex items-center justify-center gap-[80px] px-[100px] bg-opacity-70 w-full py-10'>
+      <div className='bg-[#000] flex md:flex-row sm:flex-col items-center justify-center gap-[80px] px-[100px] bg-opacity-70 w-full py-10'>
         {comments.map((comment, index) => <FeedbackCard comment={comment} key={index} />)}
       </div>
     </div>

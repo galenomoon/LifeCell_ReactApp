@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom'
 export function LoginForm({ login = () => { } }) {
   return (
     <form className="flex flex-col items-center justify-evenly h-full p-10 w-full">
-      <div className='text-[40px] text-center font-bold w-[80%] gap-2 leading-[70px] text-secondary animate-shine'>
+      <div className='text-[40px] text-center font-bold w-[80%] gap-2 md:leading-[70px] sm:leading-[50px] text-secondary animate-shine'>
         Entrar
       </div>
       <div className='flex flex-col gap-5 w-full'>
