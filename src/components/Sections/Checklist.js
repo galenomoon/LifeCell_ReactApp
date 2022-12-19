@@ -7,12 +7,11 @@ export default function Checklist({ section_ref }) {
 
   const checklist_left = [
     'CURSO DO BÁSICO AO AVANÇADO',
-    'SUPORTE NO TELEGRAM',
     'CERTIFICADO DE CONCLUSÃO',
-    'APOSTILA',
     'INDICAÇÃO DE FORNECEDORES',
     'INDICAÇÃO DE EQUIPAMENTOS',
-    'SAMSUNG, MOTOROLA E APPLE'
+    'SAMSUNG, MOTOROLA E APPLE',
+    'SOLDAS',
   ]
   const checklist_right = [
     'ANÁLISE E DIAGNÓSTICOS DE DEFEITOS',
@@ -20,7 +19,6 @@ export default function Checklist({ section_ref }) {
     'ATENDIMENTO AO CLIENTE',
     'DICAS DE QUANTO COBRAR',
     'DESOXIDAÇÃO DE PLACA',
-    'SOLDAS',
     'SUBSTITUIÇÃO DE TOUCH E LCD'
   ]
   return (
@@ -29,10 +27,10 @@ export default function Checklist({ section_ref }) {
         No nosso <span className='text-secondary animate-shine'>curso de manutenção
           em smartphones</span> você <span className='text-secondary animate-shine'>conta com</span>:
       </div>
-      <div className='flex md:flex-row sm:flex-col items-center justify-around sm:gap-[60px] md:gap-[100px] sm:px-[30px] md:px-[100px] w-full sm:py-2 md:py-10'>
+      <div className='flex md:flex-row sm:flex-col items-center justify-around sm:gap-6 md:gap-[100px] sm:px-[30px] md:px-[100px] w-full sm:py-2 md:py-10'>
         <div className='flex flex-col gap-6 w-full'>
           {checklist_left.map((item, index) =>
-            <div className='flex items-baseline gap-2 text-2xl font-bold w-full' key={index}>
+            <div className='flex items-baseline gap-2 sm:items-center md:justify-start md:items-start sm:justify-center text-2xl font-bold w-full' key={index}>
               <ImCheckboxChecked size={20} className='text-secondary animate-shine' />
               <p>{item}</p>
             </div>
@@ -40,7 +38,7 @@ export default function Checklist({ section_ref }) {
         </div>
         <div className='flex flex-col gap-6 w-full'>
           {checklist_right.map((item, index) =>
-            <div className='flex items-baseline w-full gap-2 text-2xl font-bold ' key={index}>
+            <div className='flex items-baseline w-full sm:items-center md:justify-start md:items-start sm:justify-center gap-2 text-2xl font-bold ' key={index}>
               <ImCheckboxChecked size={20} className='text-secondary animate-shine' />
               <p>{item}</p>
             </div>

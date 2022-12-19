@@ -1,0 +1,10 @@
+.video-responsive iframe {
+  width: 853px;
+  height: 480px
+}
+@media (max-width: 768px) {
+  .video-responsive iframe {
+    width: 425px;
+    height: 240px
+  }
+}

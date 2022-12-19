@@ -27,7 +27,7 @@ export default function Plans({ section_ref }) {
     },
     {
       id: 2,
-      title: '12 meses',
+      title: '3 semanas',
       price: 'R$29,99',
       is_per_mouth: true,
       subtitle: 'ou R$319,99 à vista',
@@ -60,7 +60,7 @@ export default function Plans({ section_ref }) {
     <div className='w-full flex flex-col sm:text-center items-center gap-[40px] z-[200]' ref={section_ref}>
       <div className='flex flex-col items-center justify-center'>
         <div className='md:text-[4.4rem] sm:text-[3rem] font-bold sm:leading-[50px] md:leading-normal'>
-          CURSO COMPLETO <span className='text-secondary animate-shine'>100% ONLINE</span>
+          CURSO COMPLETO <span className='text-secondary animate-shine'>100% PRÁTICO</span>
         </div>
         <div className='flex gap-2 items-center font-semibold text-[22px]'>
           <MdVerified className='text-secondary animate-shine' />
