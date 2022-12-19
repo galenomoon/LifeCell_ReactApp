@@ -8,10 +8,10 @@ import IPhone from '../IPhone'
 
 export default function Start({ section_ref }) {
   return (
-    <div className='w-full md:text-start sm:text-center flex px-[6vw] z-[200] mt-[128px]' ref={section_ref}>
-      <div className='w-full h-full flex flex-col mt-9 gap-[100px] animate-slide_from_left_md'>
+    <div className='w-full md:text-start sm:text-center flex px-[6vw] z-[200] sm:mt-[80px] md:mt-[128px]' ref={section_ref}>
+      <div className='w-full h-full flex flex-col mt-9 sm:gap-[50px] md:gap-[100px] animate-slide_from_left_md'>
         <div>
-          <p className='font-semibold text-secondary text-xl animate-shine' >CURSO ONLINE DE MANUTENÇÃO DE SMARTPHONES</p>
+          <p className='font-semibold text-secondary text-xl animate-shine' >CURSO DE MANUTENÇÃO DE SMARTPHONES</p>
           <div className='md:text-[4.4rem] sm:text-[3rem] font-bold md:leading-[80px] sm:leading-[50px]'>
             <p>
               Aprenda a ver

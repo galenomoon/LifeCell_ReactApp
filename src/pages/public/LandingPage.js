@@ -16,6 +16,7 @@ import { LoginForm, SignUpForm } from '../../components/Form';
 
 //styles
 import ConfettiGenerator from 'confetti-js';
+import Marketing from '../../components/Marketing';
 
 //context
 export const LandingPageContext = createContext()
@@ -62,6 +63,12 @@ export default function LandingPage() {
     setShowModalLogin(false)
   }
 
+  const whatsappMessage = () => {
+    const message = 'Olá, meu nome é:  %20Sou da cidade de: %20e gostaria de saber mais sobre o curso de manutenção de smartphones'
+    const phone = '5513988678639'
+    return `https://api.whatsapp.com/send?phone=${phone}&text=${message}`
+  }
+
   return (
     <>
       <canvas id="confetti-holder" className='absolute z-[1] w-full animate-shine overflow-hidden' />
@@ -71,7 +78,8 @@ export default function LandingPage() {
           <Start section_ref={first_section} />
           <Feedbacks section_ref={second_section} />
           <Checklist section_ref={third_section} />
-          <Plans section_ref={fourty_section} />
+          <Marketing section_ref={fourty_section} whatsappMessage={whatsappMessage}/>
+          {/* <Plans section_ref={fourty_section} /> */}
           <Footer />
           <Modal className='w-[450px]' show={show_modal_login} close={() => setShowModalLogin(false)} children={<LoginForm login={() => handleAuth()} />} />
           <Modal className='min-w-fit w-[1000px]' show={show_modal_signup} close={() => setShowModalSignUp(false)} children={<SignUpForm plan={plan} handleSignUp={handleSignUp} />} />
