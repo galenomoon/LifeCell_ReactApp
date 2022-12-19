@@ -14,12 +14,12 @@ export default function TopNav({ refs, scrollToSection, openModal }) {
   const top_nav_ref = React.useRef()
 
   return (
-    <div ref={top_nav_ref} className='flex md:flex-row sm:flex-col-reverse sm:gap-6 w-full fixed bg-gradient-to-b from-black sm:via-[#00000088] to-transparent z-[1000] items-center justify-between px-[64px] py-[22px] uppercase'>
+    <div ref={top_nav_ref} className='flex md:flex-row sm:flex-col-reverse sm:gap-6 w-full fixed bg-gradient-to-b from-black sm:via-[#00000088] to-transparent z-[1000] items-center justify-between sm:px-[18px] md:px-[64px] py-[22px] uppercase'>
       <img src={logo} className='w-[200px] animate-slide_from_top_md sm:hidden md:block' />
       <div className='flex sm:justify-between md:w-auto sm:w-full md:gap-[44px] animate-slide_from_top_md'>
-        <p onClick={() => scrollToSection(refs.second_section)} className='cursor-pointer hover:text-secondary duration-75'>Feedback</p>
-        <p onClick={() => scrollToSection(refs.third_section)} className='cursor-pointer hover:text-secondary duration-75'>Sobre o Curso</p>
-        <p onClick={() => scrollToSection(refs.fourty_section)} className='cursor-pointer hover:text-secondary duration-75'>Matricule-se</p>
+        <p onClick={() => scrollToSection(refs.second_section)} className='cursor-pointer hover:text-secondary duration-75 md:text-md sm:text-sm select-none'>Feedback</p>
+        <p onClick={() => scrollToSection(refs.third_section)} className='cursor-pointer hover:text-secondary duration-75 md:text-md sm:text-sm select-none'>Sobre o Curso</p>
+        <p onClick={() => scrollToSection(refs.fourty_section)} className='cursor-pointer hover:text-secondary duration-75 md:text-md sm:text-sm select-none'>Matricule-se</p>
       </div>
       {/* <div className='flex sm:gap-0 md:gap-[44px] md:justify-center md:w-auto sm:justify-between sm:w-full font-bold items-center animate-slide_from_top_md md:bg-transparent sm:bg-[#ffffff22] px-2 py-2 rounded-full'>
         <div onClick={() => openModal()} className='cursor-pointer hover:text-secondary duration-75 px-[22px] py-[8px]'>Entrar</div>

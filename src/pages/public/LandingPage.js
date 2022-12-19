@@ -78,7 +78,7 @@ export default function LandingPage() {
           <Start section_ref={first_section} />
           <Feedbacks section_ref={second_section} />
           <Checklist section_ref={third_section} />
-          <Marketing ref={fourty_section} whatsappMessage={whatsappMessage}/>
+          <Marketing section_ref={fourty_section} whatsappMessage={whatsappMessage}/>
           {/* <Plans section_ref={fourty_section} /> */}
           <Footer />
           <Modal className='w-[450px]' show={show_modal_login} close={() => setShowModalLogin(false)} children={<LoginForm login={() => handleAuth()} />} />
