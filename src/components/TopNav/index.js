@@ -25,7 +25,7 @@ export default function TopNav({ refs, scrollToSection, openModal }) {
         <div onClick={() => openModal()} className='cursor-pointer hover:text-secondary duration-75 px-[22px] py-[8px]'>Entrar</div>
         <button onClick={() => scrollToSection(refs.fourty_section)} className='uppercase hover:bg-[#fff] px-[22px] py-[8px] rounded-full bg-secondary hover:text-secondary duration-75 whitespace-nowrap'>Matricule-se</button>
       </div> */}
-      <div className='gap-4 flex flex-col fixed top-[40vh] left-0 animate-slide_from_left_md z-[1000]'>
+      <div className='gap-4 flex flex-col fixed sm:bottom-[10vh] md:top-[40vh] left-0 animate-slide_from_left_md z-[1000]'>
         <Contact link='https://wa.me/+5513988678639' icon={<BsWhatsapp size={30} />} />
         <Contact link='https://www.youtube.com/@lifecell-centrotecnico1599' icon={<BsYoutube size={30} />} />
         <Contact link='https://instagram.com/alex.senag?r=nametag' icon={<BsInstagram size={30} />} />
