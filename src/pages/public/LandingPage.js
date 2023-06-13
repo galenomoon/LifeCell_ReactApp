@@ -62,6 +62,7 @@ export default function LandingPage() {
     setShowModalLogin(false)
   }
 
+  
   return (
     <>
       <canvas id="confetti-holder" className='absolute z-[1] w-full animate-shine overflow-hidden' />
