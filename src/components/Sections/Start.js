@@ -27,7 +27,7 @@ export default function Start({ section_ref }) {
           + de <span className='text-secondary animate-shine'>200</span> novas<br /> formações de<br />
           profissionais
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col">
           <div className='md:text-[4.4rem] sm:text-[3rem] font-bold md:leading-[80px] sm:leading-[50px]'>
             Temos a <span className='text-secondary animate-shine'>melhor</span>
             <p className='whitespace-nowrap flex relative'>

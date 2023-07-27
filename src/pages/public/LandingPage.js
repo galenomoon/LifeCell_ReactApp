@@ -45,15 +45,6 @@ export default function LandingPage() {
   const handleAuth = () => navigate('/student/home')
 
   const handleSignUp = async (user) => {
-    // if (user.password === user.password_confirmation) {
-    //   await api_client.post('/auth/', user).then(res => {
-    //     console.log('token', res.data.token)
-    //     alert('Usuário criado com sucesso!')
-    //     navigate('/student/home')
-    //   }).catch(err => console.log(err))
-    //   return
-    // }
-    // alert('Senhas não conferem')
   }
 
   const showSignUpModal = (plan) => {
@@ -62,11 +53,11 @@ export default function LandingPage() {
     setShowModalLogin(false)
   }
 
-  
+
   return (
     <>
-      <canvas id="confetti-holder" className='absolute z-[1] w-full animate-shine overflow-hidden' />
-      <div className='flex flex-col h-full w-full overflow-x-hidden gap-[150px] z-[4000]'>
+      <div className='flex flex-col h-fit w-full overflow-x-hidden relative gap-[150px] z-[4000]'>
+        <canvas id="confetti-holder" className='absolute z-[1] h-full w-full animate-shine overflow-hidden' />
         <LandingPageContext.Provider value={{ showSignUpModal }}>
           <TopNav scrollToSection={scrollToSection} refs={{ first_section, second_section, third_section, fourty_section }} openModal={() => setShowModalLogin(true)} />
           <Start section_ref={first_section} />
